@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- Sidebar for History -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>History</h2>
+            </div>
+            <ul id="history-list" class="history-list">
+                <!-- History items will be injected here -->
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="hero">
+                <h1 class="glow-text">AI Image Generator</h1>
+                <p class="subtitle">Turn your words into art</p>
+            </header>
+
+            <div class="controls-container">
+                <div class="input-wrapper">
+                    <textarea id="prompt-input" placeholder="Describe the image you want to see..."></textarea>
+                    <div class="action-buttons">
+                        <button id="surprise-btn" class="btn-secondary" title="Surprise Me">✨</button>
+                        <button id="generate-btn" class="btn-primary">Generate</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-container">
+                <div id="loading-state" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Generating your masterpiece...</p>
+                </div>
+                
+                <div id="image-state" class="hidden">
+                    <img id="generated-image" src="" alt="Generated artwork">
+                    <button id="download-btn" class="btn-primary mt-4">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Download Image
+                    </button>
+                </div>
+
+                <div id="empty-state" class="empty-state">
+                    <div class="placeholder-icon">🎨</div>
+                    <p>Your generated image will appear here</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
