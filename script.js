@@ -1,5 +1,5 @@
 // Configuration
-const HF_TOKEN = "YOUR_HF_TOKEN_HERE";
+const HF_TOKEN = "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";
 const API_URL = "https://router.huggingface.co/fal-ai/fal-ai/z-image/turbo";
 const MAX_HISTORY = 5;
 
